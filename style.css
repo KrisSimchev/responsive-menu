@@ -2,56 +2,66 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
-    body {
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #fff;
     color: #333;
-    }
-    nav {
+}
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #f0f0f0;
     padding: 0.5rem 1rem;
     position: relative;
-    }
-    #toggle-menu {
+}
+
+#toggle-menu {
     display: none;
     font-size: 1.5rem;
     background: none;
     border: none;
     cursor: pointer;
-    }
-    #toggle-theme {
+}
+
+#toggle-theme {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
     background-color: #333;
     color: #fff;
-    }
-    ul {
+}
+
+ul {
     list-style: none;
-    }
-    #menu {
+}
+
+#menu {
     display: flex;
     gap: 1rem;
-    }
-    #menu > li {
+}
+
+#menu>li {
     position: relative;
-    }
-    #menu > li > a {
+}
+
+#menu>li>a {
     text-decoration: none;
     padding: 0.5rem 1rem;
     display: inline-block;
     transition: background-color 0.3s, transform 0.3s;
-    }
-    #menu > li > a:hover {
+}
+
+#menu>li>a:hover {
     background-color: #ddd;
     transform: scale(1.05);
-    }
-    #menu ul {
+}
+
+#menu ul {
     position: absolute;
     top: 100%;
     left: 0;
@@ -60,87 +70,105 @@
     transform: translateY(-10px);
     background-color: #f0f0f0;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    #menu li:hover > ul {
+}
+
+#menu li:hover>ul {
     display: block;
     opacity: 1;
     transform: translateY(0);
-    }
-    #menu li ul li a {
+}
+
+#menu li ul li a {
     padding: 0.5rem 1rem;
     display: block;
     white-space: nowrap;
-    }
-    #menu li ul li a:hover {
+}
+
+#menu li ul li a:hover {
     background-color: #ddd;
     transform: scale(1.02);
-    }
-    #menu li ul li {
+}
+
+#menu li ul li {
     position: relative;
-    }
-    #menu li ul li ul {
+}
+
+#menu li ul li ul {
     top: 0;
     left: 100%;
-    }
-    section {
+}
+
+section {
     padding: 1rem;
     max-width: 1000px;
     margin: 0 auto;
-    }
-    /* Mobile */
-    @media screen and (max-width: 768px) {
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
     #toggle-menu {
-    display: block;
+        display: block;
     }
+
     #menu {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background-color: #f0f0f0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #f0f0f0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
     }
+
     #menu[aria-expanded="true"] {
-    max-height: 500px;
+        max-height: 500px;
     }
-    #menu > li {
-    border-bottom: 1px solid #ccc;
+
+    #menu>li {
+        border-bottom: 1px solid #ccc;
     }
+
     #menu ul {
-    position: static;
-    transform: translateY(0);
+        position: static;
+        transform: translateY(0);
     }
-    #menu li:hover > ul {
-    display: none;
-    opacity: 1;
+
+    #menu li:hover>ul {
+        display: none;
+        opacity: 1;
     }
-    #menu li:focus-within > ul,
-    #menu li:focus-within > ul[aria-expanded="true"] {
-    display: block;
+
+    #menu li:focus-within>ul,
+    #menu li:focus-within>ul[aria-expanded="true"] {
+        display: block;
     }
-    }
-    /* Dark Mode */
-    body.dark {
+}
+
+/* Dark Mode */
+body.dark {
     background-color: #333;
     color: #fff;
-    }
-    body.dark nav {
+}
+
+body.dark nav {
     background-color: #444;
-    }
-    body.dark #toggle-theme {
+}
+
+body.dark #toggle-theme {
     background-color: #fff;
     color: #333;
-    }
-    body.dark #menu > li > a:hover {
+}
+
+body.dark #menu>li>a:hover {
     background-color: #555;
-    }
-    body.dark #menu ul {
+}
+
+body.dark #menu ul {
     background-color: #444;
-    }
-    body.dark #menu li ul li a:hover {
+}
+
+body.dark #menu li ul li a:hover {
     background-color: #555;
-    }
-    
+}
